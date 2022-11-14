@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+  DATABASE_URL: "postgresql://sky27postgres:831bda0ee4787ad2557378d7e06cbd5b@10.0.1.103:5432/pg?schema=public"
+
 jobs:
   build:
 
@@ -16,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
