@@ -9,8 +9,6 @@ on:
 
 env:
   DATABASE_URL: "postgresql://sky27postgres:831bda0ee4787ad2557378d7e06cbd5b@10.0.1.103:5432/pg?schema=public"
-  YANDEX_CLIENT_ID: 25363db7bca349aba364fa7dd1cfec70
-  YANDEX_CLIENT_SECRET: f07cb717e7f246c791ef155697a66b43
 
 jobs:
   build:
