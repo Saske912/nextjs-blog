@@ -4,8 +4,12 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { PrismaClient } from '@prisma/client';
 
 export async function getStaticProps() {
+    const prisma = new PrismaClient()
+    const users = await prisma.user.findMany();
+    console.log(users);
     const allPostsData = getSortedPostsData();
     return {
         props: {
