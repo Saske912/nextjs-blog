@@ -10,6 +10,8 @@ on:
     branches: [ "master" ]
 
 env:
+  YANDEX_CLIENT_ID: "25363db7bca349aba364fa7dd1cfec70"
+  YANDEX_CLIENT_SECRET: "f07cb717e7f246c791ef155697a66b43"
   DATABASE_URL: "postgres://tukvuhmyqjnlga:602f2e9547b6df32f7946810a946d3051edd76aed9a4917d3401d741c418ba04@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/d1tsn56p32c2ku"
 
 jobs:
@@ -30,4 +32,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: npx prisma migrate dev --name init
     - run: npm run build --if-present
