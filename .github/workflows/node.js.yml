@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
 
 env:
-  DATABASE_URL: "postgresql://sky27postgres:831bda0ee4787ad2557378d7e06cbd5b@10.0.1.103:5432/pg?schema=public"
+  DATABASE_URL: "postgres://tukvuhmyqjnlga:602f2e9547b6df32f7946810a946d3051edd76aed9a4917d3401d741c418ba04@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/d1tsn56p32c2ku"
 
 jobs:
   build:
